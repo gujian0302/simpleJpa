@@ -17,7 +17,7 @@
                 <prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.format_sql">true</prop>
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
             </props>
         </property>
         <property name="packagesToScan" value="webapp.dao" />
@@ -36,7 +36,7 @@
 
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
         <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="jdbcUrl" value="jdbc:postgresql://rds4q57i0pwunm9j134y.pg.rds.aliyuncs.com:3433/xxdb"/>
+        <property name="jdbcUrl" value="jdbc:postgresql://rds4q57i0pwunm9j134yo.pg.rds.aliyuncs.com:3433/xxdb" />
         <property name="username" value="xxdb"/>
         <property name="password" value="xx2014"/>
         <property name="maximumPoolSize" value="1" />
