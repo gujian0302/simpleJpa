@@ -11,7 +11,7 @@ import java.util.UUID;
  * Created by gj on 16/3/6.
  */
 @Entity
-@Table(name = "user33")
+@Table(name = "users")
 public class UserEntity {
 
     @Id
