@@ -55,6 +55,10 @@ public class ZookeeperLockNode {
 
     }
 
+    public String getLockNode(){
+        return node.toLowerCase()+"-"+serialNumber;
+    }
+
 
     public ZookeeperLockNode() {
     }
