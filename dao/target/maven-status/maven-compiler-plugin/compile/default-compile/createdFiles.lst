@@ -1,4 +1,4 @@
-webapp/dao/user/UserTest.class
-webapp/dao/user/UserRepository.class
 webapp/dao/user/UserService.class
 webapp/dao/user/UserEntity.class
+webapp/dao/user/UserTest.class
+webapp/dao/user/UserRepository.class
