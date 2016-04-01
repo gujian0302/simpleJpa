@@ -3,10 +3,19 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-       <bean class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+       <bean id = "connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
               <constructor-arg name="clusterConfig" ref="clusterConf"/>
+              <constructor-arg name="poolConfig" ref = "poolConfig" />
        </bean>
 
+       <bean id = "poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+              <property name="maxTotal" value="20"/>
+              <property name="maxWaitMillis" value="3000"/>
+       </bean>
+
+       <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+              <property name="connectionFactory" ref="connectionFactory"/>
+       </bean>
 
        <bean name="clusterConf" class="org.springframework.data.redis.connection.RedisClusterConfiguration">
               <constructor-arg name="clusterNodes">
