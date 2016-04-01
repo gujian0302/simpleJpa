@@ -11,4 +11,6 @@
        <aop:aspectj-autoproxy proxy-target-class="true" expose-proxy="true"/>
        <import resource="classpath*:spring-data.xml"/>
        <import resource="classpath*:spring-zookeeper.xml"/>
+       <import resource="classpath*:spring-data-redis.xml"/>
+       <import resource="classpath*:spring-session.xml"/>
 </beans>

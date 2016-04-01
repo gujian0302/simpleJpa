@@ -12,15 +12,12 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcherServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
 
-
-
-
     <context-param>
-        <param-name>contextConfiguration</param-name>
+        <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/spring-mvc.xml</param-value>
     </context-param>
 
