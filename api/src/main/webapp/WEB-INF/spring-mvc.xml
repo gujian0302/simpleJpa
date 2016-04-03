@@ -8,7 +8,7 @@
        <context:component-scan base-package="webapp.controller" />
        <mvc:annotation-driven />
 
-       <import resource="classpath*:spring-service.xml"/>
+
        <!--<mvc:interceptors>-->
               <!--<bean class = "org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>-->
               <!--<mvc:interceptor>-->
