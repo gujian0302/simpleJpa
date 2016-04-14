@@ -24,7 +24,7 @@
     <logger name="java.sql.ResultSet" level="INFO"/>
     <logger name="org.springframework.data.redis.core.RedisConnectionUtils" level="INFO"/>
     <logger name="org.apache.zookeeper.ClientCnxn" level="INFO"/>
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </root>

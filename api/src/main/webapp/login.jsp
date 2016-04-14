@@ -15,7 +15,7 @@
     <div class="container">
       
 
-      <form class="form-signin" method="post" action="<c:url value="/j_spring_security_check"/>">
+      <form class="form-signin" method="post" action="<c:url value="/login"/>">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input type="text" name="username" class="input-block-level" placeholder="username">
         <input type="password" name="password" class="input-block-level" placeholder="Password">

@@ -12,23 +12,17 @@
         <security:intercept-url pattern="/admin/**" access="hasAuthority('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/super-admin/**" access="hasRole('ROLE_SUPER')"/>
 
-        <security:access-denied-handler error-page="/example.jsp?access_denied"/>
         <security:form-login
-
-                login-page="/login.jsp"
-
-                default-target-url="/"
-               login-processing-url="/login"
-                authentication-failure-url="/example.jsp"
+                default-target-url="/admin/list"
+                authentication-failure-url="/"
 
                 username-parameter="username"
                 password-parameter="password"/>
 
         <security:logout invalidate-session="true"
-                logout-success-url="/form.html"
-                />
+                         logout-success-url="/form.html"/>
 
-
+        <security:csrf disabled="true" />
     </security:http>
 
 
