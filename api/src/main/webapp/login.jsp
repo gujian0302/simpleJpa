@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-  <head>
-    <title>Admin Login</title>
+  <head> <title>Admin Login</title>
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
@@ -14,11 +13,12 @@
   </head>
   <body id="login">
     <div class="container">
+      
 
-      <form class="form-signin">
+      <form class="form-signin" method="post" action="<c:url value="/j_spring_security_check"/>">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Email address">
-        <input type="password" class="input-block-level" placeholder="Password">
+        <input type="text" name="username" class="input-block-level" placeholder="username">
+        <input type="password" name="password" class="input-block-level" placeholder="Password">
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
         </label>

@@ -11,7 +11,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${catalina.base}/xx_log/xx_log.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${catalina.base}/xx_log/xx_log_%d{yyyy-MM-dd}.log</FileNamePattern>
+            <FileNamePattern>${catalina.base}/web_log/web_log_%d{yyyy-MM-dd}.log</FileNamePattern>
         </rollingPolicy>
         <encoder>
             <Pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%-5level] [%logger:%line]--%mdc{client} %msg%n</Pattern>
@@ -20,10 +20,10 @@
     <logger name="webapp.controller" level="DEBUG"/>
     <logger name="webapp" level="INFO"/>
     <logger name="org.eclipse" level="INFO"/>
-    <logger name="org.springframework" level="INFO"/>
     <logger name="java.sql.Connection" level="INFO"/>
     <logger name="java.sql.ResultSet" level="INFO"/>
-    <!--<logger name="org.apache.zookeeper.ClientCnxn" level="INFO"/>-->
+    <logger name="org.springframework.data.redis.core.RedisConnectionUtils" level="INFO"/>
+    <logger name="org.apache.zookeeper.ClientCnxn" level="INFO"/>
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
